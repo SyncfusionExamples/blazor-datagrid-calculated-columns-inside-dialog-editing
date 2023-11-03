@@ -1,0 +1,60 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">InsideDialogEditing</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="datagrid-features">
+                <span class="syncfusion-blazor-icons syncfusion-blazor-icon-datagrid" aria-hidden="true"></span><span class="displayText">DataGrid</span>
+            </NavLink>
+        </div>
+    </nav>
+</div>
+<style>
+    .scroller {
+        height: calc(100vh - 160px) !important;
+        overflow-y: auto;
+        width: 287px;
+    }
+
+        .scroller::-webkit-scrollbar, scrollbar-thumb
+        .scroller::-webkit-scrollbar-thumb {
+            width: 8px;
+            height: 110px;
+            border-radius: 4px;
+            position: center;
+        }
+
+        .scroller::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 0 10px #313C75;
+            border-radius: 4px;
+        }
+
+        .scroller::-webkit-scrollbar-track {
+            width: 28px;
+        }
+
+    .separator {
+        border: 1px solid #FFFFFF;
+        opacity: 0.14;
+        width: 247px;
+        margin: 1rem;
+        margin-top: 0px;
+    }
+</style>
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
