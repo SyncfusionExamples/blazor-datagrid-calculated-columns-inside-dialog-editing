@@ -1,20 +1,22 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">InsideDialogEditing</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
-
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="datagrid-features">
-                <span class="syncfusion-blazor-icons syncfusion-blazor-icon-datagrid" aria-hidden="true"></span><span class="displayText">DataGrid</span>
+﻿<div>
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> <span class="displayText">Syncfusion Blazor Samples</span>
             </NavLink>
-        </div>
-    </nav>
+        </li>
+    </ul>
+    <div class="separator"></div>
+    <div class="scroller">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="datagrid-features">
+                    <span class="syncfusion-blazor-icons syncfusion-blazor-icon-datagrid" aria-hidden="true"></span><span class="displayText">DataGrid</span>
+                </NavLink>
+            </li>
+
+        </ul>
+    </div>
 </div>
 <style>
     .scroller {

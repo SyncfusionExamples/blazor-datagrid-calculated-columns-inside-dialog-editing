@@ -32,5 +32,11 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script>
+        function isSidebar(x, y) {
+            var sidebarEle = document.elementFromPoint(x, y);
+            return (sidebarEle && sidebarEle.closest('.sidebar') != null) ? true : false;
+        }
+    </script>
 </body>
 </html>
